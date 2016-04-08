@@ -1,0 +1,26 @@
+<%= partial "nav" %>
+
+<div id="hero2">
+  <h1>Hero</h1>
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vitae recusandae. Lorem iptatibus illum fuga et iure veniam sequi vel libero ab quo architecto atque ratione tempora.</h3>
+</div>
+
+<div class="container2" id="container2">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, fugit? Laboriosam hic minima, quasi sequi magni laudantium dolorem non, voluptatum repudiandae numquam magnam quidem quibusdam deleniti! Laboriosam commodi, impedit.</p>
+</div>
+
+
+<script>
+  $(document).ready(function() {
+    var windowInnerHeight = window.innerHeight
+    var heroHeight = $('#hero2').height();
+    var heroPadding = (windowInnerHeight - heroHeight) / 2;
+
+    var container2 = $('#container2');
+    var containerTopToPageTop = $(container2).offset().top;
+
+    $('#hero2').css("padding-top", heroPadding);
+    $('#hero2').css("padding-bottom", heroPadding);
+    console.log(containerTopToPageTop);
+  });
+</script>

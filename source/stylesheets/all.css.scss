@@ -1,0 +1,181 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+body {
+  background: black;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  color: white;
+  height: 100%;
+  line-height: 1.4;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  height: 20%; width: 20%;
+  // background: url('../images/mountain.jpeg');
+  z-index: -1;
+  -webkit-transform: scale(5);
+  -webkit-transform-origin: top left;
+  -webkit-filter: blur(2px);
+}
+
+h1 {
+  font-size: 10em;
+  line-height: .1em;
+}
+
+#hero1 {
+  text-align: center;
+  background: tomato;
+  width: 100%;
+  padding: 5em 0;
+  
+  h3 {
+    margin: auto;
+    max-width: 30em;
+  }
+}
+
+.container1 {
+  @include outer-container;
+  padding: 0 13em;
+}
+
+#hero2 {
+  background: url('../images/mountain.jpeg');  
+  background-size: cover;
+  position: fixed;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  padding: 5em 0;
+  z-index: -1;
+
+  h3 {
+    margin: auto;
+    max-width: 30em;
+  }
+}
+
+.container2 {
+  width: 100%;
+  position: relative;
+  top: 100%;
+  background: white;
+  padding: 3em 0;
+  color: black;
+
+  p {
+    margin: auto; 
+    max-width: 30rem;
+  }
+}
+
+
+
+
+
+
+
+/////////////
+
+.navigation {
+  $large-screen: 50em !default;
+  $medium-screen: 30em !default;
+  
+  padding: 2em;
+  position: fixed;
+
+  // Mobile view
+  .navigation-menu-button {
+    display: block;
+    float: right;
+    margin: 0;
+    padding-top: 0.5em;
+
+    @include media ($medium-screen) {
+      display: none;
+    }
+  }
+
+  // Nav menu
+  .navigation-wrapper {
+    @include clearfix;
+    position: relative;
+  }
+
+  .logo {
+    float: left;
+
+    @include media ($medium-screen) {
+      float: none;
+      text-align: center;
+      display: block;
+    }
+
+    @include media ($large-screen) {
+      float: left;
+    }
+
+    img {
+      max-height: 2em;
+      padding-right: 1em;
+    }
+  }
+
+  nav {
+    float: none;
+
+    @include media ($medium-screen) {
+      float: left;
+      text-align: center;
+      line-height: 1.5em;
+      padding-top: 0.3em;
+    }
+  }
+
+  ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    @include media ($medium-screen) {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  // Nav items
+  ul li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%;
+
+    @include media ($medium-screen) {
+      background: transparent;
+      display: inline;
+      text-decoration: none;
+      width: auto;
+    }
+  }
+
+  li.nav-link a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+
+    @include media ($large-screen) {
+      padding-right: 1em;
+    }
+  }
+}
