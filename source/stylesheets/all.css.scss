@@ -21,6 +21,8 @@ body:before {
   -webkit-filter: blur(2px);
 }
 
+////////////////////
+
 h1 {
   font-size: 10em;
   line-height: .1em;
@@ -39,12 +41,22 @@ h1 {
 }
 
 .container1 {
-  @include outer-container;
-  padding: 0 13em;
+  background: white;
+  color: black;
+  padding: 3em 0;
+  width: 100%;
+
+  p {
+    margin: auto; 
+    max-width: 30rem;
+  }
 }
 
+////////////////////
+
 #hero2 {
-  background: url('../images/mountain.jpeg');  
+  // background: url('../images/mountain.jpeg');  
+  background: teal;
   background-size: cover;
   position: fixed;
   text-align: center;
@@ -87,6 +99,7 @@ h1 {
   
   padding: 2em;
   position: fixed;
+  z-index: 9;
 
   // Mobile view
   .navigation-menu-button {
@@ -104,25 +117,6 @@ h1 {
   .navigation-wrapper {
     @include clearfix;
     position: relative;
-  }
-
-  .logo {
-    float: left;
-
-    @include media ($medium-screen) {
-      float: none;
-      text-align: center;
-      display: block;
-    }
-
-    @include media ($large-screen) {
-      float: left;
-    }
-
-    img {
-      max-height: 2em;
-      padding-right: 1em;
-    }
   }
 
   nav {
@@ -173,6 +167,7 @@ h1 {
     display: inline-block;
     color: white;
     text-decoration: none;
+    font-weight: 800;
 
     @include media ($large-screen) {
       padding-right: 1em;
