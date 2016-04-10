@@ -25,7 +25,19 @@
     var container2 = $('#container2');
     var container2TopToPageTop = $(container2).offset().top;
     var windowTopToPageTop = $(window).scrollTop();
-    // console.log(windowTopToPageTop);
+
+    // fade out start
+    var windowInnerHeight = window.innerHeight;
+    var heroLeftOnScreen = container2TopToPageTop - windowTopToPageTop;
+
+    console.log(heroLeftOnScreen);
+
+    var heroLeftOnScreenFrom1To0 = heroLeftOnScreen / windowInnerHeight;
+
+    var heroLeftOnScreenFrom1To0Remainder = 1 - heroLeftOnScreenFrom1To0;
+
+    document.getElementById("hero2").style.opacity= heroLeftOnScreenFrom1To0 - heroLeftOnScreenFrom1To0Remainder;
+    // fade out end
 
     if (container2TopToPageTop < windowTopToPageTop) {
       $('#js-navigation a').css("color", "black"); 

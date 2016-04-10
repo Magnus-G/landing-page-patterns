@@ -1,5 +1,6 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "navigation";
 
 body {
   background: black;
@@ -14,19 +15,18 @@ body:before {
   content: "";
   position: absolute;
   height: 20%; width: 20%;
-  // background: url('../images/mountain.jpeg');
   z-index: -1;
   -webkit-transform: scale(5);
   -webkit-transform-origin: top left;
   -webkit-filter: blur(2px);
 }
 
-////////////////////
-
 h1 {
   font-size: 10em;
   line-height: .1em;
 }
+
+////////////////////
 
 #hero1 {
   text-align: center;
@@ -55,7 +55,6 @@ h1 {
 ////////////////////
 
 #hero2 {
-  // background: url('../images/mountain.jpeg');  
   background: teal;
   background-size: cover;
   position: fixed;
@@ -108,95 +107,5 @@ h1 {
   p {
     margin: auto; 
     max-width: 30rem;
-  }
-}
-
-
-
-
-
-
-
-/////////////
-
-.navigation {
-  $large-screen: 50em !default;
-  $medium-screen: 30em !default;
-  
-  padding: 2em;
-  position: fixed;
-  z-index: 9;
-
-  // Mobile view
-  .navigation-menu-button {
-    display: block;
-    float: right;
-    margin: 0;
-    padding-top: 0.5em;
-
-    @include media ($medium-screen) {
-      display: none;
-    }
-  }
-
-  // Nav menu
-  .navigation-wrapper {
-    @include clearfix;
-    position: relative;
-  }
-
-  nav {
-    float: none;
-
-    @include media ($medium-screen) {
-      float: left;
-      text-align: center;
-      line-height: 1.5em;
-      padding-top: 0.3em;
-    }
-  }
-
-  ul.navigation-menu {
-    clear: both;
-    display: none;
-    margin: 0 auto;
-    overflow: visible;
-    padding: 0;
-    width: 100%;
-
-    @include media ($medium-screen) {
-      display: block;
-      margin: 0;
-      padding: 0;
-    }
-
-    &.show {
-      display: block;
-    }
-  }
-
-  // Nav items
-  ul li.nav-link {
-    display: block;
-    text-align: right;
-    width: 100%;
-
-    @include media ($medium-screen) {
-      background: transparent;
-      display: inline;
-      text-decoration: none;
-      width: auto;
-    }
-  }
-
-  li.nav-link a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-
-    @include media ($large-screen) {
-      padding-right: 1em;
-    }
   }
 }
