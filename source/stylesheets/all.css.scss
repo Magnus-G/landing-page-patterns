@@ -3,27 +3,10 @@
 @import "navigation";
 
 body {
-  background: black;
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
-  color: white;
   height: 100%;
   line-height: 1.4;
-}
-
-body:before {
-  content: "";
-  position: absolute;
-  height: 20%; width: 20%;
-  z-index: -1;
-  -webkit-transform: scale(5);
-  -webkit-transform-origin: top left;
-  -webkit-filter: blur(2px);
-}
-
-h1 {
-  font-size: 10em;
-  line-height: .1em;
 }
 
 ////////////////////
@@ -31,8 +14,9 @@ h1 {
 #hero1 {
   text-align: center;
   background: tomato;
-  width: 100%;
   padding: 5em 0;
+  height: 100vh;
+  display: flex;
   
   h3 {
     margin: auto;
@@ -46,7 +30,7 @@ h1 {
   padding: 3em 0;
   width: 100%;
 
-  p {
+  .wrap {
     margin: auto; 
     max-width: 30rem;
   }
@@ -56,13 +40,13 @@ h1 {
 
 #hero2 {
   background: teal;
-  background-size: cover;
   position: fixed;
   text-align: center;
-  margin: auto;
   width: 100%;
   padding: 5em 0;
   z-index: -1;
+  height: 100vh;
+  display: flex;
 
   h3 {
     margin: auto;
@@ -78,7 +62,7 @@ h1 {
   padding: 3em 0;
   color: black;
 
-  p {
+  .wrap {
     margin: auto; 
     max-width: 30rem;
   }
@@ -87,11 +71,17 @@ h1 {
 ////////////////////
 
 #hero3 {
-  text-align: center;
-  background: #111;
+  background: #999;
   width: 100%;
   padding: 5em 0;
+  height: 100vh;
+  display: flex;
   
+  #hero3-content {
+    margin: auto;
+    text-align: center;
+  }
+
   h3 {
     margin: auto;
     max-width: 30em;
@@ -102,10 +92,43 @@ h1 {
   background: white;
   color: black;
   padding: 3em 0;
-  width: 100%;
 
-  p {
+  .wrap {
     margin: auto; 
     max-width: 30rem;
+  }
+}
+
+////////////////////
+
+#hero4 {
+  text-align: center;
+  background: #FF3A5C;
+  width: 100%;
+  padding: 5em 0;
+  height: 100vh;
+  display: flex;
+  
+  h3 {
+    margin: auto;
+    max-width: 30em;
+  }
+}
+
+.container4 {
+  background: white;
+  color: black;
+  padding: 3em 0;
+  width: 100%;
+
+  .wrap {
+    background: white;
+    max-width: 37rem;
+    margin: auto; 
+    padding: 2em;
+  }
+
+  .js-slide-up {
+    margin-top: -5em;
   }
 }
