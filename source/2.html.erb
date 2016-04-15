@@ -1,7 +1,9 @@
 <%= partial "nav" %>
 
 <div id="hero2">
-  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae vitae recusandae. Lorem iptatibus illum fuga et iure veniam sequi vel libero ab quo architecto atque ratione.</h3>
+  <div id="hero2-content">
+    <h1>Hero is fixed, fades out on scroll and covers entire screen until scroll. Nav changes color when hero is off the screen.</h1>
+  </div>
 </div>
 
 <div class="container2" id="container2">
@@ -10,29 +12,20 @@
 
 
 <script>
-  function fadeIn(el, display){
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-
-    (function fade() {
-      var val = parseFloat(el.style.opacity);
-      if (!((val += .1) > 1)) {
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
-      }
-    })();
+  function valBetween(v, min, max) {
+    return (Math.min(max, Math.max(min, v)));
   }
 
   $(document).scroll(function(){
-    var container2TopToPageTop = $("#container2").offset().top;
+    var container2 = $('#container2');
+    var container2TopToPageTop = $(container2).offset().top;
     var windowTopToPageTop = $(window).scrollTop();
-
-    // fade out start
     var windowInnerHeight = window.innerHeight;
     var heroLeftOnScreen = container2TopToPageTop - windowTopToPageTop;
     var heroLeftOnScreenFrom1To0 = heroLeftOnScreen / windowInnerHeight;
     var heroLeftOnScreenFrom1To0Remainder = 1 - heroLeftOnScreenFrom1To0;
-    document.getElementById("hero2").style.opacity= heroLeftOnScreenFrom1To0 - heroLeftOnScreenFrom1To0Remainder; // fade out end
+
+    document.getElementById("hero2-content").style.opacity= heroLeftOnScreenFrom1To0 - heroLeftOnScreenFrom1To0Remainder;
 
     // nav color switch
     if (container2TopToPageTop < windowTopToPageTop) {
@@ -43,19 +36,3 @@
     } // nav color switch end
   });
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,44 @@
+<%= partial "nav" %>
+
+<div id="hero5">
+  <figure class="hero-video clearfix">
+    <img src="./images/hero-video.jpg" alt="">
+    <video autoplay="autoplay" loop="loop" muted="muted" preload="auto" poster="./images/hero-video.jpg">
+      <source src="./images/hero-video.mp4" type="video/mp4">
+      <source src="./images/hero-video.webm" type="video/webm">
+      <source src="./images/hero-video.ogv" type="video/ogg">
+      <p>Sorry, your browser does not support the HTML5 video tag.</p>
+    </video>
+  </figure>
+
+  <div class="overlay"></div>
+
+  <div id="hero5-content">
+    <h1>Hero text on video and overlay background. Nav changes color when hero is off the screen.</h1>
+  </div>
+
+</div>
+
+<div class="container5" id="container5">
+  <%= partial "content" %>
+</div>
+
+<script>
+  $(document).scroll(function(){
+    var container5 = $('#container5');
+    var container5TopToPageTop = $(container5).offset().top;
+    var windowTopToPageTop = $(window).scrollTop();
+    var windowInnerHeight = window.innerHeight;
+    var heroLeftOnScreen = container5TopToPageTop - windowTopToPageTop;
+    // var heroLeftOnScreenFrom1To0 = heroLeftOnScreen / windowInnerHeight;
+
+
+    // nav color switch
+    if (container5TopToPageTop < windowTopToPageTop) {
+      $('#js-navigation a').css("color", "black"); 
+    }
+    if (container5TopToPageTop > windowTopToPageTop) {
+      $('#js-navigation a').css("color", "white"); 
+    } // nav color switch end
+  });
+</script>
