@@ -2,8 +2,7 @@
 
 <div id="hero5">
   <figure class="hero-video clearfix">
-    <img src="./images/hero-video.jpg" alt="">
-    <video autoplay="autoplay" loop="loop" muted="muted" preload="auto" poster="./images/hero-video.jpg">
+    <video autoplay="autoplay" loop="loop" muted="muted" preload="auto" poster="">
       <source src="./images/hero-video.mp4" type="video/mp4">
       <source src="./images/hero-video.webm" type="video/webm">
       <source src="./images/hero-video.ogv" type="video/ogg">
@@ -30,15 +29,5 @@
     var windowTopToPageTop = $(window).scrollTop();
     var windowInnerHeight = window.innerHeight;
     var heroLeftOnScreen = container5TopToPageTop - windowTopToPageTop;
-    // var heroLeftOnScreenFrom1To0 = heroLeftOnScreen / windowInnerHeight;
-
-
-    // nav color switch
-    if (container5TopToPageTop < windowTopToPageTop) {
-      $('#js-navigation a').css("color", "black"); 
-    }
-    if (container5TopToPageTop > windowTopToPageTop) {
-      $('#js-navigation a').css("color", "white"); 
-    } // nav color switch end
   });
 </script>

@@ -196,3 +196,37 @@ body {
     padding: 2em;
   }
 }
+
+////////////////////
+
+#hero6 {
+  text-align: center;
+  background: #48CAC6;
+  width: 100%;
+  padding: 5em 0;
+  height: 100vh;
+  display: flex;
+  
+  #hero6-content {
+    margin: auto;
+    max-width: 38em;
+  }
+}
+
+.container6 {
+  background: white;
+  color: black;
+  padding: 3em 0;
+  width: 100%;
+
+  .wrap {
+    background: white;
+    max-width: 37rem;
+    margin: auto; 
+    padding: 2em;
+  }
+
+  .js-slide-up {
+    margin-top: -5em;
+  }
+}

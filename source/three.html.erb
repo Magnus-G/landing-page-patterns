@@ -2,7 +2,7 @@
 
 <div id="hero3">
   <div id="hero3-content">
-    <h1>Hero text fades out on scroll and covers entire screen until scroll. Nav changes color when hero is off the screen.</h1>
+    <h1>Hero text fades out on scroll and covers entire screen until scroll.</h1>
   </div>
 </div>
 
@@ -16,8 +16,7 @@
   }
 
   $(document).scroll(function(){
-    var container3 = $('#container3');
-    var container3TopToPageTop = $(container3).offset().top;
+    var container3TopToPageTop = $('#container3').offset().top;
     var windowTopToPageTop = $(window).scrollTop();
     var windowInnerHeight = window.innerHeight;
     var heroLeftOnScreen = container3TopToPageTop - windowTopToPageTop;
@@ -25,13 +24,5 @@
     var heroLeftOnScreenFrom1To0Remainder = 1 - heroLeftOnScreenFrom1To0;
 
     document.getElementById("hero3-content").style.opacity= heroLeftOnScreenFrom1To0 - heroLeftOnScreenFrom1To0Remainder;
-
-    // nav color switch
-    if (container3TopToPageTop < windowTopToPageTop) {
-      $('#js-navigation a').css("color", "black"); 
-    }
-    if (container3TopToPageTop > windowTopToPageTop) {
-      $('#js-navigation a').css("color", "white"); 
-    } // nav color switch end
   });
 </script>

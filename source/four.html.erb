@@ -2,7 +2,7 @@
 
 <div id="hero4">
   <div id="hero4-content">
-    <h1>Content preview animated up from bottom, hero covers entire screen until scroll. Nav changes color when hero is off the screen.</h1>
+    <h1>Content preview animated up from bottom, hero covers entire screen until scroll.</h1>
   </div>
 </div>
 
@@ -10,28 +10,9 @@
   <%= partial "content" %>
 </div>
 
-
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script>
   $(document).ready(function() {
     $(".wrap").toggleClass("js-slide-up", 2000, "easeInOutExpo");
   });
-
-  $(document).scroll(function(){
-    var container4 = $('#container4');
-    var container4TopToPageTop = $(container4).offset().top;
-    var windowTopToPageTop = $(window).scrollTop();
-
-    // nav color switch
-    if (container4TopToPageTop < windowTopToPageTop) {
-      $('#js-navigation a').css("color", "black"); 
-    }
-    if (container4TopToPageTop > windowTopToPageTop) {
-      $('#js-navigation a').css("color", "white"); 
-    } // nav color switch end
-  });
 </script>
-
-
-
-

@@ -71,6 +71,7 @@
   li.nav-link a {
     display: inline-block;
     color: white;
+    text-shadow: 0 0 3px transparentize(black, 0.6);
     text-decoration: none;
     font-weight: 800;
 
