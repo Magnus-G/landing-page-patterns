@@ -68,15 +68,17 @@
     }
   }
 
-  li.nav-link a {
+}
+  li.nav-link a,
+  .code-link a {
     display: inline-block;
-    color: white;
-    text-shadow: 0 0 3px transparentize(black, 0.6);
+    color: black;
     text-decoration: none;
     font-weight: 800;
-
-    @include media ($large-screen) {
-      padding-right: 1em;
-    }
   }
+
+.code-link {
+  position: fixed;
+  padding: 2em;
+  right: 0;
 }
