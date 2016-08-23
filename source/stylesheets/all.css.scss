@@ -1,12 +1,11 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
+.wrapper {
+  padding: 2em;
+}
 
-.container {
-  @include outer-container;
-
+.top {
   h1 {
     color: #353535;
-    font-size: 6em;
+    font-size: 3em;
     line-height: 1.2;
     margin-bottom: 0.3em;
   }
@@ -14,12 +13,77 @@
   h3 {
     font-weight: 200;
     line-height: 1.5;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
     max-width: 30em;
   }
+}
+
+.container {
+  float: left;
+  margin-right: 2em;
+  width: calc(100% - 27em);
 
 
   & > div {
-    margin-bottom: 2em;
+    margin-bottom: 6em;
   }
+}
+
+.sidebar {
+  width: 25em;
+  float: right;
+}
+
+////////////
+
+.er_toc_title {
+  display: none;
+}
+
+.er_toc_content {
+  padding: 3em 0;
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin-bottom: 1.1em;
+    margin-right: .36em;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  @for $i from 1 through 60 {
+    li:nth-child(#{$i}) {
+      a {
+        background-color: adjust-hue(tomato, ($i));
+        color: white;
+      }
+    }
+    li:nth-child(1) a {
+      background-color: #d04e34;
+    }
+  }
+
+  li a {
+    padding: 6px 9px;
+    border-radius: 2px;
+  }
+}
+
+.er_toc_top {
+  background-color: red;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  margin-left: 1em;
+  vertical-align: middle; 
+  font-size: 0.3em;
 }
